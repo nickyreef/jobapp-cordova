@@ -20,6 +20,9 @@
         map.setZoom(2);
         data.forEach(job => {
           map.addMarker({
+            infoWindow: {
+              content: job.name
+            },
             lat: job.latitude,
             lng: job.longitude,
           });
