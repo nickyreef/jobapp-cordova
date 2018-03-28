@@ -1,5 +1,8 @@
 JobsCordova/plugins/*
 JobsCordova/node_modules/*
+JobsCordova/platforms/*
 JobsCordova/platforms/browser/cordova/log/*
 JobsCordova/platforms/browser/www/plugins/*
 JobsCordova/platforms/browser/cordova/node_modules/*
+JobsCordova/platforms/browser/platform_www/plugins/*
+*.ini
