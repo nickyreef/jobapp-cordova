@@ -39,7 +39,8 @@ var app = {
     receivedEvent: function(id) {
         
         document.getElementById("addJobBtn").addEventListener("click",this.addJob);
-        
+        document.getElementById("cancelNewJob").addEventListener("click",this.cancelNewJob);
+
         /*
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
@@ -52,6 +53,9 @@ var app = {
 
         var map;
         $(document).ready(function(){
+
+            document.getElementsByClassName("addFormContainer")[0].style.display = 'none';
+
         $.get("https://mobile-api-jobs.herokuapp.com/api/jobs", function( data ) {
             map = new GMaps({
             el: '#map',
@@ -81,6 +85,13 @@ var app = {
     },
 
     addJob: function(){
-        alert('toto');
+        // alert('toto');
+        document.getElementsByClassName("addFormContainer")[0].style.display = 'block';
+        document.getElementsByClassName("table")[0].style.display = 'none';
+    },
+
+    cancelNewJob: function(){
+        document.getElementsByClassName("addFormContainer")[0].style.display = 'none';
+        document.getElementsByClassName("table")[0].style.display = 'block';
     }
 };
