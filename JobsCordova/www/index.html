@@ -50,6 +50,7 @@
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCJA8Js3Fn74kZmuubyHTYg1MI3QJC20I0"></script>
     <script type="text/javascript" src="js/gmaps.min.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     
 
@@ -62,21 +63,36 @@
             <div id="map"></div>
         </div>
         <div class="row">
+            <button id="addJobBtn" class="button">Add Job</button>
+        </div>
+        <div class="row">
             <div class="col table-responsive">
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th class="tableId" scope="col">#</th>
                     <th scope="col">Nom</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Date de création</th>
+                    <th class="tableId" scope="col">Date de création</th>
                 </tr>
                 </thead>
                 <tbody>
                 </tbody>
             </table>
             </div>
-        </div>  
+        </div> 
+        <div>
+            <form>
+                <div>
+                    <label>Job name :</label>
+                    <input name="jobName" type="text">
+                </div>
+                <div>
+                    <label>Job location :</label>
+                    <input name="jobLocation" type="text">
+                </div>
+            </form>
+        </div> 
     </div>          
     <!--<div class="app">
         <h1>PhoneGap</h1>

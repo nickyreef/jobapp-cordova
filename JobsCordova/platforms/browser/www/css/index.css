@@ -67,7 +67,16 @@ body {
         margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
                                       /* offset horizontal: half of image width and text area width */
     }
+
+        
 }
+
+@media screen and (max-width:400px) {
+    .tableId {
+        display: none;
+     }
+}
+
 
 h1 {
     font-size:24px;

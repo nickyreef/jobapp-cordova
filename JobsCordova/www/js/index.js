@@ -33,10 +33,12 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        app.receivedEvent('deviceready');        
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+        
+        document.getElementById("addJobBtn").addEventListener("click",this.addJob);
         
         /*
         var parentElement = document.getElementById(id);
@@ -60,21 +62,25 @@ var app = {
             data.forEach(job => {
             map.addMarker({
                 infoWindow: {
-                content: job.name
+                    content: job.name
                 },
                 lat: job.latitude,
                 lng: job.longitude,
             });
             $("tbody").append(`
-    <tr class="${job.status === "true" ? `table-warning` : `table-success`}">
-    <td>${job.id}</td>
-    <td>${job.name}</td>
-    <td>${job.status === "true" ? `non pourvu` : `pourvu`}</td>
-    <td>${new Date(job.createdAt).toLocaleDateString()}</td>
-    </tr>
+                <tr class="${job.status === "true" ? `table-warning` : `table-success`}">
+                <td class ="tableId">${job.id}</td>
+                <td>${job.name}</td>
+                <td>${job.status === "true" ? `non pourvu` : `pourvu`}</td>
+                <td class ="tableId">${new Date(job.createdAt).toLocaleDateString()}</td>
+                </tr>
             `);
             });
         });
         });
+    },
+
+    addJob: function(){
+        alert('toto');
     }
 };
