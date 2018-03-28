@@ -1,0 +1,76 @@
+<html>
+
+  <body>
+    <h1>Ouvrez la console JS</h1>
+  </body>
+  <script>
+    console.log('hello from console');
+    /* scope */
+    if (true) {
+      let a = 40;
+      console.log(a);
+    }
+    // quelle est la valeur de a ici ?
+    //console.log(a);
+
+    /* scope */
+    class A {
+      constructor() {
+        this.a = 45;
+      }
+      method() {
+        /*function callMe() {
+          console.log(this.a);
+        }*/
+        const callMe = () => {console.log(this.a)};
+        callMe();
+      }
+    }
+
+    const t = new A();
+    t.method();
+    // Changer la fonction callMe pour que ça affiche la bonne valeur
+
+    /* spread */
+    const person = {
+      name: 'titi',
+      age: 38,
+      height: 180,
+      weight: 75,
+    }
+
+    // en utilisant le spread operator declarer une variable person2
+    // dont juste le nom change et dont la valeur est 'toto'
+
+    const person2 = {
+      ...person,
+      name: 'toto'
+    }
+    console.log(person2);
+
+    // C'est l'anniversaire de titi, changer son age
+    person.age = person.age + 1;
+    console.log(person);
+
+    const person3 = {
+      ...person,
+      age: 39
+    }
+    console.log(person3);
+
+    /* string et fonction */
+
+    // Déclarer une fonction personInfo qui prend en paramètre un objet avec au minimum trois clefs
+    // name, age, weight. Et afficher dans la console :
+    // Bonjour $name, vous avez $age et vous pesez $weight kg
+    // Utiliser une destructuration d'objet en paramètre de la fonction
+
+    const personInfo = person => `Bonjour ${person.name}, vous avez ${person.age} et vous pesez ${person.weight} kg`
+    console.log(personInfo(person));
+
+    const personInfo2 = ({name, age, weight}, param2 = "Yo") => `${param2} ${name} - ${age} - ${weight} !`
+    console.log(personInfo2(person2,"Hello"));
+    console.log(personInfo2(person2));
+
+  </script>
+</html>

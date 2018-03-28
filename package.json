@@ -1,0 +1,19 @@
+{
+  "name": "jobapp-cordova",
+  "version": "1.0.0",
+  "description": "TP1 cordova",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickyreef/jobapp-cordova.git"
+  },
+  "author": "nico song",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickyreef/jobapp-cordova/issues"
+  },
+  "homepage": "https://github.com/nickyreef/jobapp-cordova#readme"
+}
